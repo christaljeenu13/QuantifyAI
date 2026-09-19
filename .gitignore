@@ -1,0 +1,29 @@
+# Environment & Secrets
+.env
+.env.local
+*.key
+*.secret
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / Test Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases & artifacts
+*.db
+*.sqlite3
+quantifyai.db
+
+# Streamlit local state
+.streamlit/
+downloads/
+exports/
+
+# OS metadata
+.DS_Store
+Thumbs.db
