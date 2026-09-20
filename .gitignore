@@ -1,29 +1,80 @@
-# Environment & Secrets
+# ==============================================================================
+# QuantifyAI — Git Ignore Configuration (Sensitive Files & Security Hardening)
+# ==============================================================================
+
+# --- Environment Variables & Secrets ---
 .env
-.env.local
+.env.*
+!.env.example
+*.env
 *.key
+*.pem
+*.cert
+*.crt
 *.secret
+*.token
+*.pfx
+*.p12
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# Streamlit & Application Secrets
+.streamlit/secrets.toml
+secrets.toml
+credentials.json
+client_secret*.json
+service_account*.json
+service-account*.json
+firebase*.json
 
-# Pytest / Test Cache
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Local databases & artifacts
+# --- Local Databases, Storage & Artifacts ---
 *.db
+*.sqlite
 *.sqlite3
 quantifyai.db
-
-# Streamlit local state
-.streamlit/
 downloads/
 exports/
 
-# OS metadata
+# --- Python & Virtual Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Testing & Coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# --- Logs & Debugging ---
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*~
+
+# --- IDE & Editor Artifacts ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.agents/
+.gemini/
+
+# --- Operating System Files ---
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
